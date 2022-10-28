@@ -1,0 +1,41 @@
+/*********************************************************************
+*                    SEGGER Microcontroller GmbH                     *
+*       Solutions for real time microcontroller applications         *
+**********************************************************************
+*                                                                    *
+*            (c) 1995 - 2018 SEGGER Microcontroller GmbH             *
+*                                                                    *
+*       www.segger.com     Support: support@segger.com               *
+*                                                                    *
+**********************************************************************
+----------------------------------------------------------------------
+File    : TMS570.JLinkScript
+Purpose : J-Link target setup file for Freescale iMX23.
+---------------------------END-OF-HEADER------------------------------
+*/
+
+/*********************************************************************
+*
+*       InitTarget
+*/
+
+int InitTarget(void) {
+	JLINK_SYS_Report("InitTarget().");
+	
+	CPU = ARM926EJS;
+	return 0;
+}
+
+
+int ResetTarget(void){
+	JLINK_SYS_Report("ResetTarget().");
+	
+    JLINK_TIF_ActivateTargetReset();
+    JLINK_SYS_Sleep(100);
+    JLINK_TIF_ReleaseTargetReset();
+    JLINK_SYS_Sleep(1500);
+	
+	JLINK_ExecCommand("h");
+	
+	return 0;
+}

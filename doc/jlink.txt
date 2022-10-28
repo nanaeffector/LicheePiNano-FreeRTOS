@@ -1,0 +1,10 @@
+以下、接続先情報
+
+J-link		f1c100s
+---------------------------
+TMS		SDC0_D1（DBG_MS）
+TDI		SDC0_D0（DBG_DI）
+TDO		SDC0_CMD（DBG_CMD）
+TCK		SDC0_D2（DBG_CK）
+RESET		RESET
+GND		GND
