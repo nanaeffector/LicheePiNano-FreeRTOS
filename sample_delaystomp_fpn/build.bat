@@ -21,6 +21,5 @@ echo ***********************************************
 echo.
 cd %CURRENT_PATH%
 call make.bat  %GCCPATH%
-cd ..
 
-call flashwrite.bat
+call "%CURRENT_PATH%\flashwrite.bat"

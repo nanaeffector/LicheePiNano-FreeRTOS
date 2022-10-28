@@ -56,7 +56,6 @@ $(BIN): $(ELF)
 
 	@$(CP) -O binary $< $@
 	@../tools/mksunxi.exe $@
-	@copy $(subst /,\, $@) ..\lib\bin
 	@echo   ---------------------------------------------------
 	@$(SZ) $(ELF)
 

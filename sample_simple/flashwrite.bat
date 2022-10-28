@@ -17,11 +17,11 @@ set BLPATH=bootloader\build
 set MAINADDR=0x10000
 set MAINPATH=%CURRENT_PATH%\build
 
-echo "%TOOLPATH%" spiflash-write %BLADDR% "%BLPATH%bootloader.bin"
-"%TOOLPATH%" spiflash-write %BLADDR% "%BLPATH%bootloader.bin"
+echo "%TOOLPATH%" spiflash-write %BLADDR% "%BLPATH%\bootloader.bin"
+"%TOOLPATH%" spiflash-write %BLADDR% "%BLPATH%\bootloader.bin"
 echo.
-echo "%TOOLPATH%" spiflash-write %MAINADDR% "%MAINPATH%licheenanomain.bin"
-"%TOOLPATH%" spiflash-write %MAINADDR% "%MAINPATH%licheenanomain.bin"
+echo "%TOOLPATH%" spiflash-write %MAINADDR% "%MAINPATH%\licheenanomain.bin"
+"%TOOLPATH%" spiflash-write %MAINADDR% "%MAINPATH%\licheenanomain.bin"
 
 echo.
 pause
